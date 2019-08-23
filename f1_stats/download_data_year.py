@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-
+"""
+download_data_year.py 
+$ download_data_year.py -y {year} -r {store_root}
+This is a script that downloads a year's worth of race and qualifying data from
+the f1 ergast api.
+"""
 import time
 import os
 import sys
