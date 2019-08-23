@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 download_data_year.py
-$ download_data_year.py -y {year} -r {store_root}
+$ download_data_year.py {-v} -y {year} -r {store_root}
 This is a script that downloads a year's worth of race and qualifying data from
 the f1 ergast api.
 """
@@ -18,9 +18,27 @@ __maintainer__ = "Edie Zhou"
 __email__ = "edie.zhou@utexas.edu"
 __status__ = "Development"
 
+
 def get_inputs():
-    return None
+    """
+    Gets inputs for download_data_year,py
+
+    Returns:
+        parser.years (list):
+        parser.root (str):
+    """
+    parser = argparse.ArgumentParser(description='Request a year of race and quali data from Ergast API.')
+    # parser.add_argument("-v", "--verbosity", type=int, choices=[0, 1, 2], help="increase output verbosity")
+    parser.add_argument('-y', dest='years', action='append', help='Year to pull race and qualifying data for')
+    parser.add_argument('-r', dest='root', help='Root to store data set at')
+    args = parser.parse_args()
+    return args.years, args.root
 
 def main():
-    input_0 = get_inputs()
+    years, root = get_inputs()
+    print(years)
+    print(root)
     return None
+
+if __name__ == "__main__":
+    main()
