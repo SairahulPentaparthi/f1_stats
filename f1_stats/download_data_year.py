@@ -24,8 +24,8 @@ def get_inputs():
     Gets inputs for download_data_year,py
 
     Returns:
-        parser.years (list):
-        parser.root (str):
+        args.years (list): List of years to pull data for
+        args.root (str): Root to store json dumps at
     """
     parser = argparse.ArgumentParser(description='Request a year of race and quali data from Ergast API.')
     # parser.add_argument("-v", "--verbosity", type=int, choices=[0, 1, 2], help="increase output verbosity")
