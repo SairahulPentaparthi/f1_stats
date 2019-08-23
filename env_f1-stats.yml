@@ -1,0 +1,14 @@
+name: env_f1-stats
+
+channels:
+
+dependencies:
+  - python=3.7
+  - ipykernel  
+  - jupyter
+  - numpy
+  - matplotlib
+  - pandas
+  - requests
+  - yaml
+
