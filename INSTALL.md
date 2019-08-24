@@ -30,19 +30,19 @@ your original environment.
 
 # Environment Setup
 
-To set up the `env_f1-stats` environment needed to run this package, you can
-set up the environment using the `env_f1-stats.yml` config file in the top
+To set up the `env_f1_stats` environment needed to run this package, you can
+set up the environment using the `env_f1_stats.yml` config file in the top
 level of this repository. The bash command is included below:
 
 ```{bash}
-$ conda env create -f env_f1-stats.yml
+$ conda env create -f env_f1_stats.yml
 ```
 
-To add or remove dependencies from the envrionment, edit `env_f1-stats.yml`
+To add or remove dependencies from the envrionment, edit `env_f1_stats.yml`
 and rebuild the environment using the command below:
 
 ```{bash}
-$ conda env update --prefix ./env_f1-stats --file env_f1-stats.yml  --prune
+$ conda env update --prefix ./env_f1_stats --file env_f1_stats.yml  --prune
 ```
 
 # Environment Activation
@@ -50,19 +50,19 @@ $ conda env update --prefix ./env_f1-stats --file env_f1-stats.yml  --prune
 Commands used to activate and deactivate the conda environment are found
 below:
 
-#### Activate `env_f1-stats`
+#### Activate `env_f1_stats`
 
 ```{bash}
-$ conda activate ./env_f1-stats
+$ conda activate ./env_f1_stats
 ```
 
 or
 
 ```{bash}
-$ source activate env_f1-stats
+$ source activate env_f1_stats
 ```
 
-#### Deactivate `env_f1-stats`
+#### Deactivate `env_f1_stats`
 ```{bash}
 $ conda deactivate
 ```
