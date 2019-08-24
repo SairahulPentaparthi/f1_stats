@@ -11,4 +11,5 @@ dependencies:
   - pprint  
   - pandas
   - requests
+  - setuptools  
   - yaml
