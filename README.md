@@ -1,4 +1,4 @@
-# f1-stats
+# f1_stats
 
 Python library for Formula 1 statistics and visualizations
 
