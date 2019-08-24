@@ -1,31 +1,21 @@
 import os
 from setuptools import setup
+from setuptools.dist import Distribution
 
-def read(fname):
-    """
-    Purpose: 
-        Utility function to read in file from same directory
+class BinaryDistribution(Distribution):
+    def is_pure(self):
+        return False
 
-    Args:
-        fname (str): File name
-
-    Returns:
-        file_contents (str): Contents of the file 
-    """
-    file_path = os.path.join(os.path.direname(__file__), fname)
-    file_contents = open(file_path).read()
-    return file_contents
 
 setup(
-    name = 'f1_stats'
+    name = 'f1_stats',
 
     # Package metadata
     version = '0.0.1',
     author = 'Edie Zhou',
     author_email = 'edie.zhou@utexas.edu',
     description = 'Python package for f1 stats and visualizations',
-    long_description = read('README'),
-    license = 'MIT'
+    license = 'MIT',
     url = 'https://github.com/edie-zhou/f1_stats',
 
     # Package structure
@@ -41,5 +31,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
+    include_package_data=True,
+    distclass=BinaryDistribution,
 
 )
