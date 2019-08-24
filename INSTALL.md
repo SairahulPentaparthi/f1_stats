@@ -6,12 +6,12 @@ Installation instructions can be found at the link below:
 
 https://docs.conda.io/projects/conda/en/latest/user-guide/install/
 
-Before activating the env, make sure that you have exported your default
-`PATH` variable to your conda installation. It is advised to create a
-function in your `.bashrc` to quickly switch between `PATH` variables, 
-especially when developing this package. Sample bash commands used to activate
-and deactivate conda are included below (assuming conda has been installed
-under `/home/user/`):
+Before activating the env, make sure that you have exported your 
+default `PATH` variable to your conda installation. It is advised to
+create a function in your `.bashrc` to quickly switch between `PATH`
+variables,  especially when developing this package. Sample bash 
+commands used to activate and deactivate conda are included below
+(assuming conda has been installed under `/home/user/`):
 
 #### Change to conda env
 
@@ -25,21 +25,22 @@ $ export PATH="/home/user/miniconda3/bin:$PATH"
 $ export PATH=$MY_ORIGINAL_PATH
 ```
 
-Note that any active conda environments must be deactivated prior to restoring
-your original environment.
+Note that any active conda environments must be deactivated prior to 
+restoring your original environment.
 
 # Environment Setup
 
-To set up the `env_f1_stats` environment needed to run this package, you can
-set up the environment using the `env_f1_stats.yml` config file in the top
-level of this repository. The bash command is included below:
+To set up the `env_f1_stats` environment needed to run this package,
+you can set up the environment using the `env_f1_stats.yml` config file
+in the top level of this repository. The bash command is included
+below:
 
 ```{bash}
 $ conda env create -f env_f1_stats.yml
 ```
 
-To add or remove dependencies from the envrionment, edit `env_f1_stats.yml`
-and rebuild the environment using the command below:
+To add or remove dependencies from the envrionment, edit 
+`env_f1_stats.yml` and rebuild the environment using the command below:
 
 ```{bash}
 $ conda env update --prefix ./env_f1_stats --file env_f1_stats.yml  --prune
@@ -47,8 +48,8 @@ $ conda env update --prefix ./env_f1_stats --file env_f1_stats.yml  --prune
 
 # Environment Activation
 
-Commands used to activate and deactivate the conda environment are found
-below:
+Commands used to activate and deactivate the conda environment are
+found below:
 
 #### Activate `env_f1_stats`
 
@@ -56,19 +57,20 @@ below:
 $ conda activate ./env_f1_stats
 ```
 
-or
-
-```{bash}
-$ source activate env_f1_stats
-```
-
 #### Deactivate `env_f1_stats`
 ```{bash}
 $ conda deactivate
 ```
 
-or
+`$ source activate env_f1_stats` and `$ source deactivate` can still be
+used to activate the environment and deactivate the environment
+respectively, but these commands are being deprecated.
 
+#### Package Installation
+This package is currently in early development, and a wheel has not
+been created yet. To install this package, navigate to the top level 
+directory (includes `setup.py`) and execute the command below.
 ```{bash}
-$ source deactivate
+pip install . --no-deps
 ```
+Be sure to reinstall the package if you intend to modify the scripts.
